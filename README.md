@@ -66,7 +66,7 @@ We choose CASIA-WebFace as the training set, and it contains 10,575 subjects, a 
     $python eval.py
     ```
     
- <img src="./fig/Table5.png" style="zoom:60%;" />
+ <img src="./fig/Table5.png" style="zoom:50%;" />
     
 2. We provide CosFace with ResNet18 SE-block model and CosFace+DUL model in Tab. 6. You can make the following settings and run the following commands.
 
