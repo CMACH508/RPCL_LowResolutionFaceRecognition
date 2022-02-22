@@ -171,7 +171,8 @@ $ cd magface_lr
 $ python main.py --thred 0.7 --f 0.5 
 ```
 
-
+## Contact
+lipeiying@sjtu.edu.cn
 
 ## Citation
 
