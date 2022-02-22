@@ -1,6 +1,6 @@
 ## Description
 
-This is an implementation of ''Deep Rival Penalized Competitive Learning for low-resolution face recognition''. 
+This is an implementation of ''Deep Rival Penalized Competitive Learning for low-resolution face recognition''.  
 Li P, Tu S, Xu L. Deep Rival Penalized Competitive Learning for low-resolution face recognition[J]. Neural Networks, 2022.
 
 Current face recognition tasks are usually carried out on high-quality face images, but in reality, most face images are captured under unconstrained or poor conditions, e.g., by video surveillance. Existing methods are featured by learning data uncertainty to avoid overfitting the noise, or by adding margins to the angle or cosine space of the normalized softmax loss to penalize the target logit, which enforces intra-class compactness and inter-class discrepancy. In this paper, we propose a deep Rival Penalized Competitive Learning (RPCL) for deep face recognition in low-resolution (LR) images. Inspired by the idea of the RPCL, our method further enforces regulation on the rival logit, which is defined as the largest non-target logit for an input image. Different from existing methods that only consider penalization on the target logit, our method not only strengthens the learning towards the target label, but also enforces a reverse direction, i.e., becoming de-learning, away from the rival label. Comprehensive experiments demonstrate that our method improves the existing state-of-the-art methods to be very robust for LR face recognition.
