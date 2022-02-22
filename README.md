@@ -41,16 +41,6 @@ We choose CASIA-WebFace as the training set, and it contains 10,575 subjects, a 
 1. We provide RPCL_Magface model in Tab. 5 and Tab. 7. You can make the following settings and run the following commands.
 
     ```
-    #### For LFW test in Tab. 7
-    in RPCL/config.py
-        self.test_model_path = self.BASE_DIR + 'checkpoints/rpcl_magface_sota_f05t07.pth'
-        self.test_root = self.BASE_DIR + 'dataset/test_set/LFW/16x16_120'
-        self.test_list = self.BASE_DIR + 'dataset/test_set/LFW/lfw_test_pair.txt'
-    in magface/eval.py
-    	model = SoftmaxBuilder(class_num=10575, is_rpcl=True, thred=0.7, f=0.5)
-    $cd magface_lr
-    $python eval.py
-    
     #### For TinyFace test in Tab. 5
     in magface_lr/tinyface/feature_mat.py
     	parser.add_argument('--ckpt_path', type=str, default=config.test_model_path, help='')
@@ -65,10 +55,19 @@ We choose CASIA-WebFace as the training set, and it contains 10,575 subjects, a 
     $ cd magface_lr/tinyface
     $ test_face_identification
     
+    #### For LFW test in Tab. 7
+    in RPCL/config.py
+        self.test_model_path = self.BASE_DIR + 'checkpoints/rpcl_magface_sota_f05t07.pth'
+        self.test_root = self.BASE_DIR + 'dataset/test_set/LFW/16x16_120'
+        self.test_list = self.BASE_DIR + 'dataset/test_set/LFW/lfw_test_pair.txt'
+    in magface/eval.py
+    	model = SoftmaxBuilder(class_num=10575, is_rpcl=True, thred=0.7, f=0.5)
+    $cd magface_lr
+    $python eval.py
     ```
-
-     <img src="E:\study\python\_Face_Recognition_\RPCL_LRFR_release\fig\Table5.png" style="zoom:60%;" />
-
+    
+ <img src="./fig/Table5.png" style="zoom:60%;" />
+    
 2. We provide CosFace with ResNet18 SE-block model and CosFace+DUL model in Tab. 6. You can make the following settings and run the following commands.
 
     *  CosFace with ResNet18 SE-block model
@@ -110,7 +109,7 @@ We choose CASIA-WebFace as the training set, and it contains 10,575 subjects, a 
         $ python eval.py
         ```
 
-     <img src="E:\study\python\_Face_Recognition_\RPCL_LRFR_release\fig\Table6.png" style="zoom:65%;" />
+     <img src="./fig/Table6.png" style="zoom:60%;" />
 
 3. We provide RPCL-Cos model in Tab. 7. You can make the following settings and run the following commands.
 
@@ -123,7 +122,7 @@ We choose CASIA-WebFace as the training set, and it contains 10,575 subjects, a 
     $ python eval.py
     ```
 
-     <img src="./fig/Table7.png" style="zoom:65%;" />
+     <img src="./fig/Table7.png" style="zoom:50%;" />
 
 
 
